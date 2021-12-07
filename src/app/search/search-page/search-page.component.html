@@ -1,0 +1,27 @@
+<mat-progress-bar *ngIf="progressControll" mode="indeterminate"></mat-progress-bar>
+<section class="search-module">
+  <div class="container">
+    <div class="form">
+      <div class="form-container">
+        <label for="search"> Search pokemon: </label>
+        <div>
+          <input type="text" placeholder="search for name or id" [(ngModel)]="searchField" />
+          <button (click)="search()">Search</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="resultControll" class="result">
+      <div class="images">
+        <img src="{{pokemon.sprites.front_default}}" alt="">
+        <img src="{{pokemon.sprites.back_default}}" alt="">
+        <img src="{{pokemon.sprites.front_shiny}}" alt="">
+        <img src="{{pokemon.sprites.back_shiny}}" alt="">
+      </div>
+      <label for="name">Id: <span>{{pokemon.id}}</span></label>
+      <label for="name">Name: <span>{{pokemon.name}}</span></label>
+      <label for="name">height: <span>{{pokemon.height}}</span></label>
+      <label for="name">Weight: <span>{{pokemon.weight}}</span></label>
+      <label for="name">Base experience: <span>{{pokemon.base_experience}}</span></label>
+    </div>
+  </div>
+</section>

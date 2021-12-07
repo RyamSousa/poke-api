@@ -1,0 +1,15 @@
+.header{
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.header image{
+  background-color: var(--primary-color);
+}
